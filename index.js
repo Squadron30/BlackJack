@@ -4,12 +4,12 @@ let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
 let message = ""
-let messageEL = document.getElementById("message-el")
+let messageEl = document.getElementById("message-el")
+let sumEl = document.querySelector("#sum-el")
 
-// 2. Create a startGame() function. Move the conditional
-// below (line 11-20) inside the body of the function.
 
 function startGame() {
+	sumEl.textcontent = "Sum: " + sum
 	if (sum <= 20) {
 		message = "Do you want to draw a new card? 🙂"
 	} else if (sum === 21) {
@@ -19,6 +19,6 @@ function startGame() {
 		message = "You're out of the game! 😭"
 		isAlive = false
 	}
-	messageEL.textcontent = message
+	messageEl.textcontent = message
 }
 
